@@ -26,12 +26,12 @@ apt install -y nodejs
 
 # 4. Setup Directory Structure
 echo -e "${YELLOW}Setting up directories...${NC}"
-mkdir -p /root/outline-bot
+mkdir -p /root/vpn-shop
 rm -rf /var/www/html/*
 
 # 5. Create backend files (bot.js)
 echo -e "${YELLOW}Creating Backend Files...${NC}"
-cat << 'EOF' > /root/outline-bot/bot.js
+cat << 'EOF' > /root/vpn-shop/bot.js
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -1921,7 +1921,7 @@ EOF
 
 # 7. Install Node Modules
 echo -e "${YELLOW}Installing Node Modules...${NC}"
-cd /root/outline-bot
+cd /root/vpn-shop
 # Create package.json
 cat << 'PKG' > package.json
 {
@@ -1970,7 +1970,7 @@ fi
 # 10. Start Bot with PM2
 echo -e "${YELLOW}Starting Bot Process...${NC}"
 npm install -g pm2
-pm2 start bot.js --name "outline-bot"
+pm2 start bot.js --name "vpn-shop"
 pm2 startup
 pm2 save
 
