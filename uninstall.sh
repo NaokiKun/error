@@ -17,8 +17,8 @@ fi
 # 2. Stop & Delete Bot Process from PM2
 echo -e "${YELLOW}Stopping Bot Process...${NC}"
 if command -v pm2 &> /dev/null; then
-    pm2 stop outline-bot &> /dev/null
-    pm2 delete outline-bot &> /dev/null
+    pm2 stop vpn-shop &> /dev/null
+    pm2 delete vpn-shop &> /dev/null
     pm2 save &> /dev/null
     echo -e "${GREEN}Bot process stopped and removed from PM2.${NC}"
 else
@@ -27,8 +27,8 @@ fi
 
 # 3. Remove Backend Files (bot.js and folder)
 echo -e "${YELLOW}Removing Backend Files (bot.js)...${NC}"
-if [ -d "/root/outline-bot" ]; then
-    rm -rf /root/outline-bot
+if [ -d "/root/vpn-shop" ]; then
+    rm -rf /root/vpn-shop
     echo -e "${GREEN}Deleted /root/outline-bot directory.${NC}"
 else
     echo -e "${RED}Backend directory not found.${NC}"
