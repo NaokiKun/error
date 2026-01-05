@@ -17,6 +17,8 @@ WebPanel
 bash <(curl -Ls https://raw.githubusercontent.com/naingmyoe/error/refs/heads/main/installserverindex.sh)
 ```
 
+Uninstall
+
 ```bash
 bash <(curl -Ls https://raw.githubusercontent.com/naingmyoe/error/refs/heads/main/uninstall.sh)
 ```
