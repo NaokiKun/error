@@ -1149,7 +1149,7 @@ pm2 startup
 pm2 save
 
 echo -e "${GREEN}==========================================${NC}"
-echo -e "${GREEN} INSTALLATION COMPLETE! ${NC}"
+echo -e "${GREEN} INSTALLATION COMPLETE | script by NAOKI! ${NC}"
 echo -e "${GREEN}==========================================${NC}"
 echo -e "Backend Port: ${YELLOW}3000${NC}"
 echo -e "Service Name: ${YELLOW}vpn-shop${NC}"
