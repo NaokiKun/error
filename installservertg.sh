@@ -999,7 +999,7 @@ function startBot() {
             bot.sendMessage(chatId, "📩 Slip Received. Please wait."); 
             ADMIN_IDS.forEach(adminId => { 
                 bot.sendPhoto(adminId, msg.photo[msg.photo.length - 1].file_id, { 
-                    caption: `💰 Order: ${name}\n📦 ${plan.days}D / ${plan.gb}GB\n🖥️ Server: ${targetServerName}\nType: ${type}`, 
+                    caption: `💰 Order: ${username}\n📦 ${plan.days}D / ${plan.gb}GB\n🖥️ Server: ${targetServerName}\nType: ${type}`, 
                     reply_markup: { inline_keyboard: [[{ text: "✅ Approve", callback_data: `approve_${chatId}` }, { text: "❌ Reject", callback_data: `reject_${chatId}` }]] } 
                 }).catch(e => {}); 
             }); 
