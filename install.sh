@@ -982,7 +982,7 @@ function startBot() {
             bot.sendMessage(chatId, "📩 Slip Received. Please wait."); 
             ADMIN_IDS.forEach(adminId => { 
                 bot.sendPhoto(adminId, msg.photo[msg.photo.length - 1].file_id, { 
-                    caption: `💰 Order: ${name}\n📦 ${plan.days}D / ${plan.gb}GB\n🖥️ Server: ${targetServerName}\nType: ${type}`, 
+                    caption: `💰 Order: ${username}\n📦 ${plan.days}D / ${plan.gb}GB\n🖥️ Server: ${targetServerName}\nType: ${type}`, 
                     reply_markup: { inline_keyboard: [[{ text: "✅ Approve", callback_data: `approve_${chatId}` }, { text: "❌ Reject", callback_data: `reject_${chatId}` }]] } 
                 }).catch(e => {}); 
             }); 
@@ -1133,7 +1133,7 @@ pm2 startup
 pm2 save
 
 echo -e "${GREEN}==========================================${NC}"
-echo -e "${GREEN} INSTALLATION COMPLETE! ${NC}"
+echo -e "${GREEN} INSTALLATION COMPLETE! Script by NAOKI${NC}"
 echo -e "${GREEN}==========================================${NC}"
 echo -e "Backend Port: ${YELLOW}3000${NC}"
 echo -e "Service Name: ${YELLOW}vpn-shop${NC}"
